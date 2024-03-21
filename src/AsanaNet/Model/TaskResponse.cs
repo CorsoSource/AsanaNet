@@ -179,7 +179,7 @@ namespace AsanaNet.Model
         /// <param name="assigneeSection">assigneeSection.</param>
         /// <param name="parent">parent.</param>
         /// <param name="workspace">workspace.</param>
-        public TaskResponse(string name = default(string), ResourceSubtypeEnum? resourceSubtype = default(ResourceSubtypeEnum?), TaskCompactAllOfCreatedBy createdBy = default(TaskCompactAllOfCreatedBy), ApprovalStatusEnum? approvalStatus = default(ApprovalStatusEnum?), AssigneeStatusEnum? assigneeStatus = default(AssigneeStatusEnum?), bool completed = default(bool), TaskBaseAllOfCompletedBy completedBy = default(TaskBaseAllOfCompletedBy), DateTime? dueAt = default(DateTime?), DateOnly dueOn = default(DateOnly), TaskBaseAllOfExternal external = default(TaskBaseAllOfExternal), string htmlNotes = default(string), bool liked = default(bool), string notes = default(string), DateTime? startAt = default(DateTime?), DateOnly startOn = default(DateOnly), TaskResponseAllOfAssignee assignee = default(TaskResponseAllOfAssignee), TaskResponseAllOfAssigneeSection assigneeSection = default(TaskResponseAllOfAssigneeSection), TaskResponseAllOfParent parent = default(TaskResponseAllOfParent), TaskResponseAllOfWorkspace workspace = default(TaskResponseAllOfWorkspace))
+        public TaskResponse(string name = default(string), ResourceSubtypeEnum? resourceSubtype = default(ResourceSubtypeEnum?), TaskCompactAllOfCreatedBy createdBy = default(TaskCompactAllOfCreatedBy), ApprovalStatusEnum? approvalStatus = default(ApprovalStatusEnum?), AssigneeStatusEnum? assigneeStatus = default(AssigneeStatusEnum?), bool completed = default(bool), TaskBaseAllOfCompletedBy completedBy = default(TaskBaseAllOfCompletedBy), DateTime? dueAt = default(DateTime?), DateTime? dueOn = default(DateTime?), TaskBaseAllOfExternal external = default(TaskBaseAllOfExternal), string htmlNotes = default(string), bool liked = default(bool), string notes = default(string), DateTime? startAt = default(DateTime?), DateTime? startOn = default(DateTime?), TaskResponseAllOfAssignee assignee = default(TaskResponseAllOfAssignee), TaskResponseAllOfAssigneeSection assigneeSection = default(TaskResponseAllOfAssigneeSection), TaskResponseAllOfParent parent = default(TaskResponseAllOfParent), TaskResponseAllOfWorkspace workspace = default(TaskResponseAllOfWorkspace))
         {
             this.Name = name;
             this.ResourceSubtype = resourceSubtype;
@@ -339,7 +339,7 @@ namespace AsanaNet.Model
         /// <example>Sat Sep 14 19:00:00 CDT 2019</example>
         [DataMember(Name = "due_on", EmitDefaultValue = true)]
         [JsonConverter(typeof(OpenAPIDateConverter))]
-        public DateOnly DueOn { get; set; }
+        public DateTime? DueOn { get; set; }
 
         /// <summary>
         /// Gets or Sets External
@@ -527,7 +527,7 @@ namespace AsanaNet.Model
         /// <example>Fri Sep 13 19:00:00 CDT 2019</example>
         [DataMember(Name = "start_on", EmitDefaultValue = true)]
         [JsonConverter(typeof(OpenAPIDateConverter))]
-        public DateOnly StartOn { get; set; }
+        public DateTime? StartOn { get; set; }
 
         /// <summary>
         /// This value represents the sum of all the Time Tracking entries in the Actual Time field on a given Task. It is represented as a nullable long value.

@@ -326,7 +326,7 @@ namespace AsanaNet.Model
         /// <param name="owner">The current owner of the project, may be null..</param>
         /// <param name="team">The team that this project is shared with..</param>
         /// <param name="workspace">The &#x60;gid&#x60; of a workspace..</param>
-        public ProjectRequest(string name = default(string), bool archived = default(bool), ColorEnum? color = default(ColorEnum?), ProjectBaseAllOfCurrentStatus currentStatus = default(ProjectBaseAllOfCurrentStatus), ProjectBaseAllOfCurrentStatusUpdate currentStatusUpdate = default(ProjectBaseAllOfCurrentStatusUpdate), DefaultViewEnum? defaultView = default(DefaultViewEnum?), DateOnly dueDate = default(DateOnly), DateOnly dueOn = default(DateOnly), string htmlNotes = default(string), string notes = default(string), bool varPublic = default(bool), DateOnly startOn = default(DateOnly), DefaultAccessLevelEnum? defaultAccessLevel = default(DefaultAccessLevelEnum?), MinimumAccessLevelForCustomizationEnum? minimumAccessLevelForCustomization = default(MinimumAccessLevelForCustomizationEnum?), MinimumAccessLevelForSharingEnum? minimumAccessLevelForSharing = default(MinimumAccessLevelForSharingEnum?), Dictionary<string, string> customFields = default(Dictionary<string, string>), string followers = default(string), string owner = default(string), string team = default(string), string workspace = default(string))
+        public ProjectRequest(string name = default(string), bool archived = default(bool), ColorEnum? color = default(ColorEnum?), ProjectBaseAllOfCurrentStatus currentStatus = default(ProjectBaseAllOfCurrentStatus), ProjectBaseAllOfCurrentStatusUpdate currentStatusUpdate = default(ProjectBaseAllOfCurrentStatusUpdate), DefaultViewEnum? defaultView = default(DefaultViewEnum?), DateTime? dueDate = default(DateTime?), DateTime? dueOn = default(DateTime?), string htmlNotes = default(string), string notes = default(string), bool varPublic = default(bool), DateTime? startOn = default(DateTime?), DefaultAccessLevelEnum? defaultAccessLevel = default(DefaultAccessLevelEnum?), MinimumAccessLevelForCustomizationEnum? minimumAccessLevelForCustomization = default(MinimumAccessLevelForCustomizationEnum?), MinimumAccessLevelForSharingEnum? minimumAccessLevelForSharing = default(MinimumAccessLevelForSharingEnum?), Dictionary<string, string> customFields = default(Dictionary<string, string>), string followers = default(string), string owner = default(string), string team = default(string), string workspace = default(string))
         {
             this.Name = name;
             this.Archived = archived;
@@ -448,7 +448,7 @@ namespace AsanaNet.Model
         /// <example>Sat Sep 14 19:00:00 CDT 2019</example>
         [DataMember(Name = "due_date", EmitDefaultValue = true)]
         [JsonConverter(typeof(OpenAPIDateConverter))]
-        public DateOnly DueDate { get; set; }
+        public DateTime? DueDate { get; set; }
 
         /// <summary>
         /// The day on which this project is due. This takes a date with format YYYY-MM-DD.
@@ -457,7 +457,7 @@ namespace AsanaNet.Model
         /// <example>Sat Sep 14 19:00:00 CDT 2019</example>
         [DataMember(Name = "due_on", EmitDefaultValue = true)]
         [JsonConverter(typeof(OpenAPIDateConverter))]
-        public DateOnly DueOn { get; set; }
+        public DateTime? DueOn { get; set; }
 
         /// <summary>
         /// [Opt In](/docs/inputoutput-options). The notes of the project with formatting as HTML.
@@ -521,7 +521,7 @@ namespace AsanaNet.Model
         /// <example>Fri Sep 13 19:00:00 CDT 2019</example>
         [DataMember(Name = "start_on", EmitDefaultValue = true)]
         [JsonConverter(typeof(OpenAPIDateConverter))]
-        public DateOnly StartOn { get; set; }
+        public DateTime? StartOn { get; set; }
 
         /// <summary>
         /// An object where each key is the GID of a custom field and its corresponding value is either an enum GID, string, number, or object (depending on the custom field type). See the [custom fields guide](/docs/custom-fields-guide) for details on creating and updating custom field values.

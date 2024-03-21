@@ -37,7 +37,7 @@ namespace AsanaNet.Model
         /// <param name="durationMinutes">Time in minutes tracked by the entry..</param>
         /// <param name="enteredOn">The day that this entry is logged on..</param>
         /// <param name="createdBy">createdBy.</param>
-        public TimeTrackingEntryCompact(int durationMinutes = default(int), DateOnly enteredOn = default(DateOnly), UserCompact createdBy = default(UserCompact))
+        public TimeTrackingEntryCompact(int durationMinutes = default(int), DateTime enteredOn = default(DateTime), UserCompact createdBy = default(UserCompact))
         {
             this.DurationMinutes = durationMinutes;
             this.EnteredOn = enteredOn;
@@ -91,7 +91,7 @@ namespace AsanaNet.Model
         /// <example>Fri Mar 13 19:00:00 CDT 2015</example>
         [DataMember(Name = "entered_on", EmitDefaultValue = false)]
         [JsonConverter(typeof(OpenAPIDateConverter))]
-        public DateOnly EnteredOn { get; set; }
+        public DateTime EnteredOn { get; set; }
 
         /// <summary>
         /// Gets or Sets CreatedBy

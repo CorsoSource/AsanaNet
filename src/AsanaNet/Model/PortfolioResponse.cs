@@ -169,7 +169,7 @@ namespace AsanaNet.Model
         /// <param name="startOn">The day on which work for this portfolio begins, or null if the portfolio has no start date. This takes a date with &#x60;YYYY-MM-DD&#x60; format. *Note: &#x60;due_on&#x60; must be present in the request when setting or unsetting the &#x60;start_on&#x60; parameter. Additionally, &#x60;start_on&#x60; and &#x60;due_on&#x60; cannot be the same date.*.</param>
         /// <param name="workspace">workspace.</param>
         /// <param name="varPublic">True if the portfolio is public to its workspace members..</param>
-        public PortfolioResponse(string name = default(string), ColorEnum? color = default(ColorEnum?), UserCompact createdBy = default(UserCompact), List<CustomFieldSettingResponse> customFieldSettings = default(List<CustomFieldSettingResponse>), PortfolioResponseAllOfCurrentStatusUpdate currentStatusUpdate = default(PortfolioResponseAllOfCurrentStatusUpdate), DateOnly dueOn = default(DateOnly), List<CustomFieldCompact> customFields = default(List<CustomFieldCompact>), UserCompact owner = default(UserCompact), DateOnly startOn = default(DateOnly), PortfolioResponseAllOfWorkspace workspace = default(PortfolioResponseAllOfWorkspace), bool varPublic = default(bool))
+        public PortfolioResponse(string name = default(string), ColorEnum? color = default(ColorEnum?), UserCompact createdBy = default(UserCompact), List<CustomFieldSettingResponse> customFieldSettings = default(List<CustomFieldSettingResponse>), PortfolioResponseAllOfCurrentStatusUpdate currentStatusUpdate = default(PortfolioResponseAllOfCurrentStatusUpdate), DateTime? dueOn = default(DateTime?), List<CustomFieldCompact> customFields = default(List<CustomFieldCompact>), UserCompact owner = default(UserCompact), DateTime? startOn = default(DateTime?), PortfolioResponseAllOfWorkspace workspace = default(PortfolioResponseAllOfWorkspace), bool varPublic = default(bool))
         {
             this.Name = name;
             this.Color = color;
@@ -266,7 +266,7 @@ namespace AsanaNet.Model
         /// <example>Sat Sep 14 19:00:00 CDT 2019</example>
         [DataMember(Name = "due_on", EmitDefaultValue = true)]
         [JsonConverter(typeof(OpenAPIDateConverter))]
-        public DateOnly DueOn { get; set; }
+        public DateTime? DueOn { get; set; }
 
         /// <summary>
         /// Array of Custom Fields.
@@ -302,7 +302,7 @@ namespace AsanaNet.Model
         /// <example>Fri Sep 13 19:00:00 CDT 2019</example>
         [DataMember(Name = "start_on", EmitDefaultValue = true)]
         [JsonConverter(typeof(OpenAPIDateConverter))]
-        public DateOnly StartOn { get; set; }
+        public DateTime? StartOn { get; set; }
 
         /// <summary>
         /// Gets or Sets Workspace

@@ -70,7 +70,7 @@ namespace AsanaNet.Api
         /// <param name="optFields">This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetTimePeriods200Response</returns>
-        GetTimePeriods200Response GetTimePeriods(string workspace, bool? optPretty = default(bool?), int? limit = default(int?), string? offset = default(string?), DateOnly? startOn = default(DateOnly?), DateOnly? endOn = default(DateOnly?), List<string>? optFields = default(List<string>?), int operationIndex = 0);
+        GetTimePeriods200Response GetTimePeriods(string workspace, bool? optPretty = default(bool?), int? limit = default(int?), string? offset = default(string?), DateTime? startOn = default(DateTime?), DateTime? endOn = default(DateTime?), List<string>? optFields = default(List<string>?), int operationIndex = 0);
 
         /// <summary>
         /// Get time periods
@@ -88,7 +88,7 @@ namespace AsanaNet.Api
         /// <param name="optFields">This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetTimePeriods200Response</returns>
-        ApiResponse<GetTimePeriods200Response> GetTimePeriodsWithHttpInfo(string workspace, bool? optPretty = default(bool?), int? limit = default(int?), string? offset = default(string?), DateOnly? startOn = default(DateOnly?), DateOnly? endOn = default(DateOnly?), List<string>? optFields = default(List<string>?), int operationIndex = 0);
+        ApiResponse<GetTimePeriods200Response> GetTimePeriodsWithHttpInfo(string workspace, bool? optPretty = default(bool?), int? limit = default(int?), string? offset = default(string?), DateTime? startOn = default(DateTime?), DateTime? endOn = default(DateTime?), List<string>? optFields = default(List<string>?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -144,7 +144,7 @@ namespace AsanaNet.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetTimePeriods200Response</returns>
-        System.Threading.Tasks.Task<GetTimePeriods200Response> GetTimePeriodsAsync(string workspace, bool? optPretty = default(bool?), int? limit = default(int?), string? offset = default(string?), DateOnly? startOn = default(DateOnly?), DateOnly? endOn = default(DateOnly?), List<string>? optFields = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetTimePeriods200Response> GetTimePeriodsAsync(string workspace, bool? optPretty = default(bool?), int? limit = default(int?), string? offset = default(string?), DateTime? startOn = default(DateTime?), DateTime? endOn = default(DateTime?), List<string>? optFields = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get time periods
@@ -163,7 +163,7 @@ namespace AsanaNet.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetTimePeriods200Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetTimePeriods200Response>> GetTimePeriodsWithHttpInfoAsync(string workspace, bool? optPretty = default(bool?), int? limit = default(int?), string? offset = default(string?), DateOnly? startOn = default(DateOnly?), DateOnly? endOn = default(DateOnly?), List<string>? optFields = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetTimePeriods200Response>> GetTimePeriodsWithHttpInfoAsync(string workspace, bool? optPretty = default(bool?), int? limit = default(int?), string? offset = default(string?), DateTime? startOn = default(DateTime?), DateTime? endOn = default(DateTime?), List<string>? optFields = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -509,7 +509,7 @@ namespace AsanaNet.Api
         /// <param name="optFields">This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetTimePeriods200Response</returns>
-        public GetTimePeriods200Response GetTimePeriods(string workspace, bool? optPretty = default(bool?), int? limit = default(int?), string? offset = default(string?), DateOnly? startOn = default(DateOnly?), DateOnly? endOn = default(DateOnly?), List<string>? optFields = default(List<string>?), int operationIndex = 0)
+        public GetTimePeriods200Response GetTimePeriods(string workspace, bool? optPretty = default(bool?), int? limit = default(int?), string? offset = default(string?), DateTime? startOn = default(DateTime?), DateTime? endOn = default(DateTime?), List<string>? optFields = default(List<string>?), int operationIndex = 0)
         {
             AsanaNet.Client.ApiResponse<GetTimePeriods200Response> localVarResponse = GetTimePeriodsWithHttpInfo(workspace, optPretty, limit, offset, startOn, endOn, optFields);
             return localVarResponse.Data;
@@ -528,7 +528,7 @@ namespace AsanaNet.Api
         /// <param name="optFields">This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetTimePeriods200Response</returns>
-        public AsanaNet.Client.ApiResponse<GetTimePeriods200Response> GetTimePeriodsWithHttpInfo(string workspace, bool? optPretty = default(bool?), int? limit = default(int?), string? offset = default(string?), DateOnly? startOn = default(DateOnly?), DateOnly? endOn = default(DateOnly?), List<string>? optFields = default(List<string>?), int operationIndex = 0)
+        public AsanaNet.Client.ApiResponse<GetTimePeriods200Response> GetTimePeriodsWithHttpInfo(string workspace, bool? optPretty = default(bool?), int? limit = default(int?), string? offset = default(string?), DateTime? startOn = default(DateTime?), DateTime? endOn = default(DateTime?), List<string>? optFields = default(List<string>?), int operationIndex = 0)
         {
             // verify the required parameter 'workspace' is set
             if (workspace == null)
@@ -638,7 +638,7 @@ namespace AsanaNet.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetTimePeriods200Response</returns>
-        public async System.Threading.Tasks.Task<GetTimePeriods200Response> GetTimePeriodsAsync(string workspace, bool? optPretty = default(bool?), int? limit = default(int?), string? offset = default(string?), DateOnly? startOn = default(DateOnly?), DateOnly? endOn = default(DateOnly?), List<string>? optFields = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetTimePeriods200Response> GetTimePeriodsAsync(string workspace, bool? optPretty = default(bool?), int? limit = default(int?), string? offset = default(string?), DateTime? startOn = default(DateTime?), DateTime? endOn = default(DateTime?), List<string>? optFields = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             AsanaNet.Client.ApiResponse<GetTimePeriods200Response> localVarResponse = await GetTimePeriodsWithHttpInfoAsync(workspace, optPretty, limit, offset, startOn, endOn, optFields, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -658,7 +658,7 @@ namespace AsanaNet.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetTimePeriods200Response)</returns>
-        public async System.Threading.Tasks.Task<AsanaNet.Client.ApiResponse<GetTimePeriods200Response>> GetTimePeriodsWithHttpInfoAsync(string workspace, bool? optPretty = default(bool?), int? limit = default(int?), string? offset = default(string?), DateOnly? startOn = default(DateOnly?), DateOnly? endOn = default(DateOnly?), List<string>? optFields = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AsanaNet.Client.ApiResponse<GetTimePeriods200Response>> GetTimePeriodsWithHttpInfoAsync(string workspace, bool? optPretty = default(bool?), int? limit = default(int?), string? offset = default(string?), DateTime? startOn = default(DateTime?), DateTime? endOn = default(DateTime?), List<string>? optFields = default(List<string>?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'workspace' is set
             if (workspace == null)

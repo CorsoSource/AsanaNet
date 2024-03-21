@@ -1,26 +1,23 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo><!-- setting GenerateAssemblyInfo to false causes this bug https://github.com/dotnet/project-system/issues/3934 -->
     <TargetFramework>net8.0</TargetFramework>
     <AssemblyName>AsanaNet</AssemblyName>
-    <PackageId>CorsoSystems.AsanaNet</PackageId>
+    <PackageId>AsanaNet</PackageId>
     <OutputType>Library</OutputType>
-    <Authors>William Bohn</Authors>
-    <Company>Corso Systems</Company>
+    <Authors>OpenAPI</Authors>
+    <Company>OpenAPI</Company>
     <AssemblyTitle>OpenAPI Library</AssemblyTitle>
-    <Description>An Asana client generated from the OpenAPI specification</Description>
+    <Description>A library generated from a OpenAPI doc</Description>
     <Copyright>No Copyright</Copyright>
     <RootNamespace>AsanaNet</RootNamespace>
-    <Version>1.0.0</Version>
+    <Version>1.1.0</Version>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\AsanaNet.xml</DocumentationFile>
-    <RepositoryUrl>https://github.com/CorsoSource/AsanaNet</RepositoryUrl>
+    <RepositoryUrl>https://github.com/GIT_USER_ID/GIT_REPO_ID.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes>Minor update</PackageReleaseNotes>
     <Nullable>annotations</Nullable>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Title>AsanaNet</Title>
-    <PackageProjectUrl>https://github.com/CorsoSource/AsanaNet</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>

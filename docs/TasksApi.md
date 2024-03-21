@@ -2612,7 +2612,7 @@ catch (ApiException e)
 
 <a id="searchtasksforworkspace"></a>
 # **SearchTasksForWorkspace**
-> SearchTasksForWorkspace200Response SearchTasksForWorkspace (string workspaceGid, bool? optPretty = null, string? text = null, string? resourceSubtype = null, string? assigneeAny = null, string? assigneeNot = null, string? portfoliosAny = null, string? projectsAny = null, string? projectsNot = null, string? projectsAll = null, string? sectionsAny = null, string? sectionsNot = null, string? sectionsAll = null, string? tagsAny = null, string? tagsNot = null, string? tagsAll = null, string? teamsAny = null, string? followersNot = null, string? createdByAny = null, string? createdByNot = null, string? assignedByAny = null, string? assignedByNot = null, string? likedByNot = null, string? commentedOnByNot = null, DateOnly? dueOnBefore = null, DateOnly? dueOnAfter = null, DateOnly? dueOn = null, DateTime? dueAtBefore = null, DateTime? dueAtAfter = null, DateOnly? startOnBefore = null, DateOnly? startOnAfter = null, DateOnly? startOn = null, DateOnly? createdOnBefore = null, DateOnly? createdOnAfter = null, DateOnly? createdOn = null, DateTime? createdAtBefore = null, DateTime? createdAtAfter = null, DateOnly? completedOnBefore = null, DateOnly? completedOnAfter = null, DateOnly? completedOn = null, DateTime? completedAtBefore = null, DateTime? completedAtAfter = null, DateOnly? modifiedOnBefore = null, DateOnly? modifiedOnAfter = null, DateOnly? modifiedOn = null, DateTime? modifiedAtBefore = null, DateTime? modifiedAtAfter = null, bool? isBlocking = null, bool? isBlocked = null, bool? hasAttachment = null, bool? completed = null, bool? isSubtask = null, string? sortBy = null, bool? sortAscending = null, List<string>? optFields = null)
+> SearchTasksForWorkspace200Response SearchTasksForWorkspace (string workspaceGid, bool? optPretty = null, string? text = null, string? resourceSubtype = null, string? assigneeAny = null, string? assigneeNot = null, string? portfoliosAny = null, string? projectsAny = null, string? projectsNot = null, string? projectsAll = null, string? sectionsAny = null, string? sectionsNot = null, string? sectionsAll = null, string? tagsAny = null, string? tagsNot = null, string? tagsAll = null, string? teamsAny = null, string? followersNot = null, string? createdByAny = null, string? createdByNot = null, string? assignedByAny = null, string? assignedByNot = null, string? likedByNot = null, string? commentedOnByNot = null, DateTime? dueOnBefore = null, DateTime? dueOnAfter = null, DateTime? dueOn = null, DateTime? dueAtBefore = null, DateTime? dueAtAfter = null, DateTime? startOnBefore = null, DateTime? startOnAfter = null, DateTime? startOn = null, DateTime? createdOnBefore = null, DateTime? createdOnAfter = null, DateTime? createdOn = null, DateTime? createdAtBefore = null, DateTime? createdAtAfter = null, DateTime? completedOnBefore = null, DateTime? completedOnAfter = null, DateTime? completedOn = null, DateTime? completedAtBefore = null, DateTime? completedAtAfter = null, DateTime? modifiedOnBefore = null, DateTime? modifiedOnAfter = null, DateTime? modifiedOn = null, DateTime? modifiedAtBefore = null, DateTime? modifiedAtAfter = null, bool? isBlocking = null, bool? isBlocked = null, bool? hasAttachment = null, bool? completed = null, bool? isSubtask = null, string? sortBy = null, bool? sortAscending = null, List<string>? optFields = null)
 
 Search tasks in a workspace
 
@@ -2664,27 +2664,27 @@ namespace Example
             var assignedByNot = 12345,23456,34567;  // string? | Comma-separated list of user identifiers (optional) 
             var likedByNot = 12345,23456,34567;  // string? | Comma-separated list of user identifiers (optional) 
             var commentedOnByNot = 12345,23456,34567;  // string? | Comma-separated list of user identifiers (optional) 
-            var dueOnBefore = 2019-09-15;  // DateOnly? | ISO 8601 date string (optional) 
-            var dueOnAfter = 2019-09-15;  // DateOnly? | ISO 8601 date string (optional) 
-            var dueOn = 2019-09-15;  // DateOnly? | ISO 8601 date string or `null` (optional) 
+            var dueOnBefore = 2019-09-15;  // DateTime? | ISO 8601 date string (optional) 
+            var dueOnAfter = 2019-09-15;  // DateTime? | ISO 8601 date string (optional) 
+            var dueOn = 2019-09-15;  // DateTime? | ISO 8601 date string or `null` (optional) 
             var dueAtBefore = 2019-04-15T01:01:46.055Z;  // DateTime? | ISO 8601 datetime string (optional) 
             var dueAtAfter = 2019-04-15T01:01:46.055Z;  // DateTime? | ISO 8601 datetime string (optional) 
-            var startOnBefore = 2019-09-15;  // DateOnly? | ISO 8601 date string (optional) 
-            var startOnAfter = 2019-09-15;  // DateOnly? | ISO 8601 date string (optional) 
-            var startOn = 2019-09-15;  // DateOnly? | ISO 8601 date string or `null` (optional) 
-            var createdOnBefore = 2019-09-15;  // DateOnly? | ISO 8601 date string (optional) 
-            var createdOnAfter = 2019-09-15;  // DateOnly? | ISO 8601 date string (optional) 
-            var createdOn = 2019-09-15;  // DateOnly? | ISO 8601 date string or `null` (optional) 
+            var startOnBefore = 2019-09-15;  // DateTime? | ISO 8601 date string (optional) 
+            var startOnAfter = 2019-09-15;  // DateTime? | ISO 8601 date string (optional) 
+            var startOn = 2019-09-15;  // DateTime? | ISO 8601 date string or `null` (optional) 
+            var createdOnBefore = 2019-09-15;  // DateTime? | ISO 8601 date string (optional) 
+            var createdOnAfter = 2019-09-15;  // DateTime? | ISO 8601 date string (optional) 
+            var createdOn = 2019-09-15;  // DateTime? | ISO 8601 date string or `null` (optional) 
             var createdAtBefore = 2019-04-15T01:01:46.055Z;  // DateTime? | ISO 8601 datetime string (optional) 
             var createdAtAfter = 2019-04-15T01:01:46.055Z;  // DateTime? | ISO 8601 datetime string (optional) 
-            var completedOnBefore = 2019-09-15;  // DateOnly? | ISO 8601 date string (optional) 
-            var completedOnAfter = 2019-09-15;  // DateOnly? | ISO 8601 date string (optional) 
-            var completedOn = 2019-09-15;  // DateOnly? | ISO 8601 date string or `null` (optional) 
+            var completedOnBefore = 2019-09-15;  // DateTime? | ISO 8601 date string (optional) 
+            var completedOnAfter = 2019-09-15;  // DateTime? | ISO 8601 date string (optional) 
+            var completedOn = 2019-09-15;  // DateTime? | ISO 8601 date string or `null` (optional) 
             var completedAtBefore = 2019-04-15T01:01:46.055Z;  // DateTime? | ISO 8601 datetime string (optional) 
             var completedAtAfter = 2019-04-15T01:01:46.055Z;  // DateTime? | ISO 8601 datetime string (optional) 
-            var modifiedOnBefore = 2019-09-15;  // DateOnly? | ISO 8601 date string (optional) 
-            var modifiedOnAfter = 2019-09-15;  // DateOnly? | ISO 8601 date string (optional) 
-            var modifiedOn = 2019-09-15;  // DateOnly? | ISO 8601 date string or `null` (optional) 
+            var modifiedOnBefore = 2019-09-15;  // DateTime? | ISO 8601 date string (optional) 
+            var modifiedOnAfter = 2019-09-15;  // DateTime? | ISO 8601 date string (optional) 
+            var modifiedOn = 2019-09-15;  // DateTime? | ISO 8601 date string or `null` (optional) 
             var modifiedAtBefore = 2019-04-15T01:01:46.055Z;  // DateTime? | ISO 8601 datetime string (optional) 
             var modifiedAtAfter = 2019-04-15T01:01:46.055Z;  // DateTime? | ISO 8601 datetime string (optional) 
             var isBlocking = false;  // bool? | Filter to incomplete tasks with dependents (optional) 
@@ -2761,27 +2761,27 @@ catch (ApiException e)
 | **assignedByNot** | **string?** | Comma-separated list of user identifiers | [optional]  |
 | **likedByNot** | **string?** | Comma-separated list of user identifiers | [optional]  |
 | **commentedOnByNot** | **string?** | Comma-separated list of user identifiers | [optional]  |
-| **dueOnBefore** | **DateOnly?** | ISO 8601 date string | [optional]  |
-| **dueOnAfter** | **DateOnly?** | ISO 8601 date string | [optional]  |
-| **dueOn** | **DateOnly?** | ISO 8601 date string or &#x60;null&#x60; | [optional]  |
+| **dueOnBefore** | **DateTime?** | ISO 8601 date string | [optional]  |
+| **dueOnAfter** | **DateTime?** | ISO 8601 date string | [optional]  |
+| **dueOn** | **DateTime?** | ISO 8601 date string or &#x60;null&#x60; | [optional]  |
 | **dueAtBefore** | **DateTime?** | ISO 8601 datetime string | [optional]  |
 | **dueAtAfter** | **DateTime?** | ISO 8601 datetime string | [optional]  |
-| **startOnBefore** | **DateOnly?** | ISO 8601 date string | [optional]  |
-| **startOnAfter** | **DateOnly?** | ISO 8601 date string | [optional]  |
-| **startOn** | **DateOnly?** | ISO 8601 date string or &#x60;null&#x60; | [optional]  |
-| **createdOnBefore** | **DateOnly?** | ISO 8601 date string | [optional]  |
-| **createdOnAfter** | **DateOnly?** | ISO 8601 date string | [optional]  |
-| **createdOn** | **DateOnly?** | ISO 8601 date string or &#x60;null&#x60; | [optional]  |
+| **startOnBefore** | **DateTime?** | ISO 8601 date string | [optional]  |
+| **startOnAfter** | **DateTime?** | ISO 8601 date string | [optional]  |
+| **startOn** | **DateTime?** | ISO 8601 date string or &#x60;null&#x60; | [optional]  |
+| **createdOnBefore** | **DateTime?** | ISO 8601 date string | [optional]  |
+| **createdOnAfter** | **DateTime?** | ISO 8601 date string | [optional]  |
+| **createdOn** | **DateTime?** | ISO 8601 date string or &#x60;null&#x60; | [optional]  |
 | **createdAtBefore** | **DateTime?** | ISO 8601 datetime string | [optional]  |
 | **createdAtAfter** | **DateTime?** | ISO 8601 datetime string | [optional]  |
-| **completedOnBefore** | **DateOnly?** | ISO 8601 date string | [optional]  |
-| **completedOnAfter** | **DateOnly?** | ISO 8601 date string | [optional]  |
-| **completedOn** | **DateOnly?** | ISO 8601 date string or &#x60;null&#x60; | [optional]  |
+| **completedOnBefore** | **DateTime?** | ISO 8601 date string | [optional]  |
+| **completedOnAfter** | **DateTime?** | ISO 8601 date string | [optional]  |
+| **completedOn** | **DateTime?** | ISO 8601 date string or &#x60;null&#x60; | [optional]  |
 | **completedAtBefore** | **DateTime?** | ISO 8601 datetime string | [optional]  |
 | **completedAtAfter** | **DateTime?** | ISO 8601 datetime string | [optional]  |
-| **modifiedOnBefore** | **DateOnly?** | ISO 8601 date string | [optional]  |
-| **modifiedOnAfter** | **DateOnly?** | ISO 8601 date string | [optional]  |
-| **modifiedOn** | **DateOnly?** | ISO 8601 date string or &#x60;null&#x60; | [optional]  |
+| **modifiedOnBefore** | **DateTime?** | ISO 8601 date string | [optional]  |
+| **modifiedOnAfter** | **DateTime?** | ISO 8601 date string | [optional]  |
+| **modifiedOn** | **DateTime?** | ISO 8601 date string or &#x60;null&#x60; | [optional]  |
 | **modifiedAtBefore** | **DateTime?** | ISO 8601 datetime string | [optional]  |
 | **modifiedAtAfter** | **DateTime?** | ISO 8601 datetime string | [optional]  |
 | **isBlocking** | **bool?** | Filter to incomplete tasks with dependents | [optional]  |

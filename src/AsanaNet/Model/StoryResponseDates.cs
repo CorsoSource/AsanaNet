@@ -37,7 +37,7 @@ namespace AsanaNet.Model
         /// <param name="startOn">The day on which work for this goal begins, or null if the goal has no start date. This takes a date with &#x60;YYYY-MM-DD&#x60; format, and cannot be set unless there is an accompanying due date..</param>
         /// <param name="dueAt">The UTC date and time on which this task is due, or null if the task has no due time. This takes an ISO 8601 date string in UTC and should not be used together with &#x60;due_on&#x60;..</param>
         /// <param name="dueOn">The localized day on which this goal is due. This takes a date with format &#x60;YYYY-MM-DD&#x60;..</param>
-        public StoryResponseDates(DateOnly startOn = default(DateOnly), DateTime? dueAt = default(DateTime?), DateOnly dueOn = default(DateOnly))
+        public StoryResponseDates(DateTime? startOn = default(DateTime?), DateTime? dueAt = default(DateTime?), DateTime dueOn = default(DateTime))
         {
             this.StartOn = startOn;
             this.DueAt = dueAt;
@@ -51,7 +51,7 @@ namespace AsanaNet.Model
         /// <example>Fri Sep 13 19:00:00 CDT 2019</example>
         [DataMember(Name = "start_on", EmitDefaultValue = true)]
         [JsonConverter(typeof(OpenAPIDateConverter))]
-        public DateOnly StartOn { get; set; }
+        public DateTime? StartOn { get; set; }
 
         /// <summary>
         /// The UTC date and time on which this task is due, or null if the task has no due time. This takes an ISO 8601 date string in UTC and should not be used together with &#x60;due_on&#x60;.
@@ -68,7 +68,7 @@ namespace AsanaNet.Model
         /// <example>Sat Sep 14 19:00:00 CDT 2019</example>
         [DataMember(Name = "due_on", EmitDefaultValue = false)]
         [JsonConverter(typeof(OpenAPIDateConverter))]
-        public DateOnly DueOn { get; set; }
+        public DateTime DueOn { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
